@@ -25,6 +25,7 @@ jobs:
         with:
           fetch-depth: 0
       - run: git fetch --force --tags
+      - run: git tag -a `date +%s`
       - uses: actions/setup-go@v4
         with:
           go-version: stable
