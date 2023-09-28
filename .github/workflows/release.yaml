@@ -2,9 +2,10 @@
 name: goreleaser
 
 on:
-  pull_request_target:
-    types:
-      - closed
+  push:
+    # run only against tags
+    tags:
+      - "*"
 
 permissions:
   contents: write
